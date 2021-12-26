@@ -3,6 +3,7 @@ package TestCases;
 import BasicPackage.ChromeDriverSetup;
 import PageObject.MultiProductPageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -25,20 +26,22 @@ public class MultiProduct_01 extends ChromeDriverSetup {
 //        driver.switchTo().alert().dismiss();
         MultiProductPageObject aMultiProductSelectPageObject = new MultiProductPageObject(driver);
         aMultiProductSelectPageObject.search.sendKeys("soap");
-        Thread.sleep(10000);
-
+        Thread.sleep(5000);
 
         aMultiProductSelectPageObject.soap1.click();
 //        aMultiProductSelectPageObject.soap1.click();
-        Thread.sleep(10000);
+        Thread.sleep(4000);
 
         aMultiProductSelectPageObject.soadAddButton.click();
         aMultiProductSelectPageObject.soadAddButton.click();
-        aMultiProductSelectPageObject.soadAddButton.click();
-        Thread.sleep(10000);
+        Thread.sleep(4000);
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,350)", "");
+        Thread.sleep(4000);
 
         aMultiProductSelectPageObject.soap2.click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         aMultiProductSelectPageObject.soap3.click();
         Thread.sleep(2000);
@@ -55,12 +58,15 @@ public class MultiProduct_01 extends ChromeDriverSetup {
 
         MultiProductPageObject aMultiProductSelectPageObject = new MultiProductPageObject(driver);
         aMultiProductSelectPageObject.oilsearch.sendKeys("oil");
-        Thread.sleep(10000);
+        Thread.sleep(6000);
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,350)", "");
+        Thread.sleep(3000);
 
         aMultiProductSelectPageObject.oil1.click();
         Thread.sleep(4000);
 
-        aMultiProductSelectPageObject.oil2.click();
         aMultiProductSelectPageObject.oil2.click();
         aMultiProductSelectPageObject.oil2.click();
         Thread.sleep(4000);
