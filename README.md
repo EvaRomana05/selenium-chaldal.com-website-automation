@@ -2,7 +2,21 @@
 
 ## Check out [Chaldal.com](https://www.chaldal.com) website automation.
 
+**TestCase 01: (soap & oil)** 
+_Test-1_
 
+1. Go to chaldal.com URL
+2. Search soap
+3. From soap, select 1 soap 3 pieces
+4. Scroll down
+5. Select 2 different soap
+
+Test-2
+
+1. Go to chaldal.com URL
+2. Search soap
+3. Scroll down
+4. From oil, select 1 soap & select another soap 2 pieces
 
 This project using the following languages and frameworks:
 
